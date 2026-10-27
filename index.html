@@ -23,6 +23,8 @@
   <meta name="twitter:title" content="BaeNest — A cozy nest for two">
   <meta name="twitter:description" content="Daily rituals for two hearts, and a nest that grows when you both show up.">
   <meta name="twitter:image" content="https://baenest.com/og-image.jpg">
+  <link rel="preload" href="/assets/fonts/plus-jakarta-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/fraunces-italic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/style.css">
   <script src="/assets/site.js" defer></script>
 </head>
@@ -106,7 +108,7 @@
       <div class="stars" data-count="50" aria-hidden="true"></div>
       <div class="wrap">
         <div class="section-head reveal">
-          <span class="kicker">A day in your nest</span>
+          <span class="kicker"><b>01</b>A day in your nest</span>
           <h2 id="story-title">Small rituals, <em>all day long</em></h2>
         </div>
 
@@ -228,7 +230,7 @@
     <section id="features" aria-labelledby="features-title">
       <div class="wrap">
         <div class="section-head center reveal">
-          <span class="kicker">Everything for two</span>
+          <span class="kicker"><b>02</b>Everything for two</span>
           <h2 id="features-title">So much more to <em>share</em></h2>
           <p class="lead">Play, plan, dream and remember.</p>
         </div>
@@ -289,7 +291,7 @@
     <section class="alt matcher" aria-labelledby="match-title">
       <div class="wrap split">
         <div class="reveal">
-          <span class="kicker">Date night matcher</span>
+          <span class="kicker"><b>03</b>Date night matcher</span>
           <h2 id="match-title">Date night, <em>decided.</em></h2>
           <p class="lead">No more “what do you want to do?” Swipe date ideas — when you both like one, it’s a match.</p>
         </div>
@@ -308,23 +310,23 @@
     <section aria-labelledby="trust-title">
       <div class="wrap">
         <div class="section-head center reveal">
-          <span class="kicker">Built with care</span>
+          <span class="kicker"><b>04</b>Built with care</span>
           <h2 id="trust-title">Just the <em>two of you</em></h2>
         </div>
         <div class="trust">
           <article class="tcard reveal">
-            <div class="big" aria-hidden="true">🔒</div>
+            <div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8.5 11V8a3.5 3.5 0 0 1 7 0v3M12 15v2"/></svg></div>
             <h3>Private by design</h3>
             <p>No profiles, no followers, no feed.</p>
           </article>
           <article class="tcard reveal">
-            <div class="big" aria-hidden="true">🌏</div>
+            <div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.7 5.6 3.7 9s-1.2 6.4-3.7 9c-2.5-2.6-3.7-5.6-3.7-9S9.5 5.6 12 3z"/></svg></div>
             <h3>Speaks your language</h3>
             <p>Use it in the language of home.</p>
             <div class="langs"><span lang="en">English</span><span lang="ta">தமிழ்</span><span lang="hi">हिन्दी</span><span lang="ml">മലയാളം</span><span lang="kn">ಕನ್ನಡ</span><span lang="te">తెలుగు</span><span lang="fr">Français</span></div>
           </article>
           <article class="tcard reveal">
-            <div class="big" aria-hidden="true">✈️</div>
+            <div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.2"/></svg></div>
             <h3>Close or far apart</h3>
             <p>Your rituals reach each other anywhere.</p>
           </article>
@@ -336,7 +338,7 @@
     <section id="pair" class="alt" aria-labelledby="pair-title">
       <div class="wrap">
         <div class="section-head reveal">
-          <span class="kicker">Pairing</span>
+          <span class="kicker"><b>05</b>Pairing</span>
           <h2 id="pair-title">Pair up in <em>under a minute</em></h2>
         </div>
         <ol class="steps reveal">
@@ -384,7 +386,7 @@
     <section id="faq" aria-labelledby="faq-title">
       <div class="wrap">
         <div class="section-head center reveal">
-          <span class="kicker">FAQ</span>
+          <span class="kicker"><b>06</b>FAQ</span>
           <h2 id="faq-title">Good <em>questions</em></h2>
         </div>
         <div class="faq reveal">
@@ -425,14 +427,19 @@
   </main>
 
   <footer class="site-footer">
-    <div class="wrap">
-      <span>© <span id="year">2026</span> BaeNest · Made with 💕 for two</span>
-      <nav aria-label="Footer">
-        <a href="/privacy/">Privacy</a>
-        <a href="/terms/">Terms</a>
-        <a href="/contact/">Contact</a>
+    <div class="wrap foot">
+      <div class="foot-brand">
+        <a class="brand" href="/" aria-label="BaeNest home"><img src="/assets/logo-mark.png" width="34" height="34" alt="">BaeNest</a>
+        <p>A cozy nest for two. Small daily rituals that keep you close.</p>
+      </div>
+      <nav aria-labelledby="foot-product"><h2 id="foot-product">Product</h2>
+        <a href="/#story">How it feels</a><a href="/#features">Features</a><a href="/#pair">Pairing</a><a href="/#faq">FAQ</a>
+      </nav>
+      <nav aria-labelledby="foot-company"><h2 id="foot-company">Company</h2>
+        <a href="/contact/">Contact</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a>
       </nav>
     </div>
+    <div class="wrap foot-bottom"><span>© <span id="year">2026</span> BaeNest</span><span>admin@baenest.com</span></div>
   </footer>
 </body>
 </html>
