@@ -7,11 +7,11 @@
    .night sections are always dark (cinematic hero, story, closing band). */
 
 :root {
-  --bg: #fff7f2;
-  --bg-2: #fbebe7;
+  --bg: #ffffff;
+  --bg-2: #fff1f4;
   --surface: #ffffff;
   --glass: rgba(255, 255, 255, 0.72);
-  --glass-border: rgba(255, 255, 255, 0.9);
+  --glass-border: rgba(58, 15, 36, 0.08);
   --text: #3a0f24;
   --muted: #6e4558;
   --accent: #c2185b;
@@ -19,7 +19,7 @@
   --btn-bg: #3a0f24;
   --btn-text: #ffffff;
   --btn-hover: #5a1736;
-  --border: #f2dcd8;
+  --border: #f6e1e7;
   --ring: rgba(194, 24, 91, 0.4);
   --shadow: 0 1px 2px rgba(58, 15, 36, 0.05), 0 14px 36px -18px rgba(58, 15, 36, 0.22);
   --shadow-lg: 0 2px 4px rgba(58, 15, 36, 0.06), 0 36px 72px -30px rgba(58, 15, 36, 0.38);
@@ -29,9 +29,9 @@
   --hero: radial-gradient(60% 50% at 15% 10%, #fde3d6 0%, transparent 70%),
           radial-gradient(55% 55% at 90% 20%, #f8d7df 0%, transparent 70%),
           radial-gradient(70% 60% at 50% 100%, #f6e3d3 0%, transparent 70%),
-          #fff7f2;
+          #ffffff;
   --bubble: #dcf5d0;
-  --grain: 0.045;
+  --grain: 0.03;
   --radius: 28px;
   --font: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI Variable Display", "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
   --serif: "Fraunces", "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
