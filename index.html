@@ -1,13 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
   <title>BaeNest — A cozy nest for two</title>
-  <meta name="description" content="BaeNest is a private little space for couples: a daily heartbeat, questions and an oath, partner moments, and a nest that grows every day you both show up.">
-  <meta name="theme-color" content="#fff3ef" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#180d1b" media="(prefers-color-scheme: dark)">
+  <meta name="description" content="BaeNest is the couples app for daily rituals: feel each other's heartbeat with Touch to sync, answer a daily question, keep a promise, seal open-when letters, match on date nights and grow a nest together.">
+  <meta name="theme-color" content="#0e0713">
   <link rel="canonical" href="https://baenest.com/">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <meta property="og:type" content="website">
@@ -36,6 +35,7 @@
         BaeNest
       </a>
       <nav class="nav" aria-label="Main">
+        <a href="#story">How it feels</a>
         <a href="#features">Features</a>
         <a href="#pair">Pairing</a>
         <a href="#faq">FAQ</a>
@@ -46,139 +46,274 @@
   </header>
 
   <main id="main">
-    <section class="hero" aria-labelledby="hero-title">
+    <!-- ============ HERO ============ -->
+    <section class="hero night" aria-labelledby="hero-title">
+      <div class="aurora" aria-hidden="true"></div>
+      <div class="stars" data-count="90" aria-hidden="true"></div>
       <div class="wrap">
-        <div>
-          <span class="eyebrow"><span class="dot" aria-hidden="true">♥</span>Made for exactly two</span>
-          <h1 id="hero-title">A <em>cozy</em> nest for two</h1>
-          <p class="lead">Send a heartbeat, answer a question, keep a little promise — and watch your nest grow every day you both show up.</p>
-          <div class="cta-row">
+        <div class="hero-copy">
+          <span class="eyebrow fade-up"><span class="dot" aria-hidden="true">♥</span>The couples app made for exactly two</span>
+          <h1 id="hero-title"><span class="h-line"><span>A <em>cozy</em> nest</span></span><span class="h-line"><span>for two.</span></span></h1>
+          <p class="lead fade-up d1">Feel each other’s heartbeat, answer a question, keep a little promise — and grow a nest together, one day at a time.</p>
+          <div class="cta-row fade-up d2">
             <a class="btn btn-play" href="https://play.google.com/store/apps/details?id=com.baenest.app" rel="noopener">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 3.5v17a1 1 0 0 0 1.5.86l14-8.5a1 1 0 0 0 0-1.72l-14-8.5A1 1 0 0 0 5 3.5z"/></svg>
               <span><small>Get it on</small>Google Play</span>
             </a>
-            <a class="btn btn-ghost" href="#pair">How pairing works</a>
+            <a class="btn btn-ghost" href="#story">See how it feels</a>
           </div>
-          <p class="fine">Android · iPhone coming later</p>
+          <div class="meta fade-up d3"><span>15+ things to do together</span><span>7 languages</span><span>Android · iPhone later</span></div>
         </div>
 
-        <div class="phone-wrap" role="img" aria-label="The BaeNest app: today's ritual, your nest's progress and a big heartbeat button">
-          <div class="chip chip-1" aria-hidden="true"><span class="emo">💓</span><span>Bae sent a heartbeat<small>just now</small></span></div>
-          <div class="chip chip-2" aria-hidden="true"><span class="emo">🪺</span><span>Your nest grew!<small>+1 twig today</small></span></div>
-          <div class="phone" aria-hidden="true">
-            <div class="screen">
-              <div class="scr-head"><small>Day 12 together</small><strong>You &amp; Bae 💕</strong></div>
-              <div class="scr-card scr-nest">
-                <svg viewBox="40 90 240 130"><ellipse cx="160" cy="166" rx="108" ry="20" fill="#8e5634"/><circle cx="122" cy="148" r="32" fill="#ff9fb8"/><circle cx="198" cy="148" r="32" fill="#cfa9ec"/><circle cx="134" cy="138" r="4" fill="#2b1430"/><circle cx="186" cy="138" r="4" fill="#2b1430"/><path d="M152 143l11 5-11 5zM168 143l-11 5 11 5z" fill="#f5a524"/><path d="M52 166c8 50 208 50 216 0-38 16-178 16-216 0z" fill="#b8764b"/></svg>
-                <div><b>Your nest</b><span>12 twigs · 3 to the next level</span><div class="bar"><i></i></div></div>
+        <div class="hero-stage">
+          <div class="phone-wrap" role="img" aria-label="BaeNest home screen: Touch to sync is live, today's rituals, and your nest's progress">
+            <div class="phone-glow" aria-hidden="true"></div>
+            <div class="chip chip-1" aria-hidden="true"><span class="emo">💓</span><span>Bae is holding the heart<small>Tap to join</small></span></div>
+            <div class="chip chip-2" aria-hidden="true"><span class="emo">🪺</span><span>Your nest grew!<small>+1 twig today</small></span></div>
+            <div class="phone-intro" aria-hidden="true">
+              <div class="phone-float">
+                <div class="phone">
+                  <div class="screen">
+                    <div class="scr">
+                      <div class="s-card s-dark s-head"><small>Day 12 together</small><strong>You &amp; Bae 💕</strong></div>
+                      <div class="s-card">
+                        <span class="live">LIVE</span>
+                        <b>Touch to sync</b>
+                        <div class="muted-s">Bae is holding the heart now 💓</div>
+                      </div>
+                      <div class="s-card">
+                        <span class="s-label">Today</span>
+                        <ul class="ritual"><li>Daily question</li><li>Touch to sync</li><li class="open">Oath</li></ul>
+                      </div>
+                      <div class="s-card row">
+                        <svg viewBox="40 90 240 130"><ellipse cx="160" cy="166" rx="108" ry="20" fill="#8e5634"/><circle cx="122" cy="148" r="32" fill="#ff9fb8"/><circle cx="198" cy="148" r="32" fill="#cfa9ec"/><circle cx="134" cy="138" r="4" fill="#2b1430"/><circle cx="186" cy="138" r="4" fill="#2b1430"/><path d="M152 143l11 5-11 5zM168 143l-11 5 11 5z" fill="#f5a524"/><path d="M52 166c8 50 208 50 216 0-38 16-178 16-216 0z" fill="#b8764b"/></svg>
+                        <div><b>Your nest</b><div class="muted-s">12 twigs · 3 to the next level</div><div class="bar"><i></i></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="scr-card">
-                <ul class="ritual">
-                  <li>Heartbeat</li>
-                  <li>Today’s question</li>
-                  <li class="todo-r">Oath</li>
-                </ul>
-              </div>
-              <div class="beat"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 21c-6.5-4.2-10-8-10-12a5 5 0 0 1 10-1.5A5 5 0 0 1 22 9c0 4-3.5 7.8-10 12z"/></svg></div>
-              <p class="beat-label">Tap to send a heartbeat</p>
             </div>
           </div>
         </div>
       </div>
+      <div class="scroll-cue" aria-hidden="true"></div>
     </section>
 
-    <div class="ticker" aria-label="Little rituals">
-      <div class="ticker-track">
-        <ul>
-          <li>Good morning, heartbeat</li>
-          <li>What made you smile today?</li>
-          <li>I promise to listen first</li>
-          <li>Thinking of you</li>
-          <li>One more twig for our nest</li>
-          <li>Proud of us</li>
-        </ul>
-        <ul aria-hidden="true">
-          <li>Good morning, heartbeat</li>
-          <li>What made you smile today?</li>
-          <li>I promise to listen first</li>
-          <li>Thinking of you</li>
-          <li>One more twig for our nest</li>
-          <li>Proud of us</li>
-        </ul>
-      </div>
-    </div>
-
-    <section id="features" aria-labelledby="features-title">
+    <!-- ============ STORY ============ -->
+    <section id="story" class="story night" aria-labelledby="story-title">
+      <div class="stars" data-count="50" aria-hidden="true"></div>
       <div class="wrap">
         <div class="section-head reveal">
-          <span class="kicker">Daily rituals</span>
-          <h2 id="features-title">Two minutes a day, <em>together</em></h2>
-          <p>No feeds, no strangers. Just small rituals that keep the two of you close.</p>
+          <span class="kicker">A day in your nest</span>
+          <h2 id="story-title">Small rituals, <em>all day long</em></h2>
+          <p>A few minutes, spread through the day. Here’s what that feels like.</p>
         </div>
 
-        <div class="bento">
-          <article class="tile tile-nest reveal">
-            <span class="tag">The Bae Nest</span>
-            <h3>A nest that grows when you both show up</h3>
-            <p>Every day you both finish your heartbeat, questions and oath, your nest gets a new twig.</p>
-            <div class="viz">
-              <svg class="nest-art" viewBox="40 55 240 165" aria-hidden="true">
-                <ellipse cx="160" cy="166" rx="108" ry="20" fill="#8e5634"/>
-                <circle cx="122" cy="148" r="32" fill="#ff9fb8"/>
-                <ellipse cx="108" cy="158" rx="15" ry="9" fill="#f27a9a" transform="rotate(-20 108 158)"/>
-                <circle cx="134" cy="138" r="3.6" fill="#2b1430"/>
-                <path d="M152 143l11 5-11 5z" fill="#f5a524"/>
-                <circle cx="198" cy="148" r="32" fill="#cfa9ec"/>
-                <ellipse cx="212" cy="158" rx="15" ry="9" fill="#b083dc" transform="rotate(20 212 158)"/>
-                <circle cx="186" cy="138" r="3.6" fill="#2b1430"/>
-                <path d="M168 143l-11 5 11 5z" fill="#f5a524"/>
-                <path d="M52 166c8 50 208 50 216 0-38 16-178 16-216 0z" fill="#b8764b"/>
-                <g fill="none" stroke="#7d4a2c" stroke-width="3" stroke-linecap="round" opacity=".75"><path d="M66 178c50 18 138 18 188 0"/><path d="M80 194c40 14 120 14 160 0"/></g>
-                <path d="M160 102c-14-9-23-17-23-27 0-7 5.5-12 11.8-12 5 0 9 2.8 11.2 7 2.2-4.2 6.2-7 11.2-7 6.3 0 11.8 5 11.8 12 0 10-9 18-23 27z" fill="#e11d5c"/>
-              </svg>
-              <div class="week" role="img" aria-label="This week: five days done, today in progress">
-                <span class="done">M</span><span class="done">T</span><span class="done">W</span><span class="done">T</span><span class="done">F</span><span class="today">S</span><span>S</span>
+        <div class="story-grid">
+          <div class="story-stage" data-step="0">
+            <div class="progress" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="phone-wrap" aria-hidden="true">
+              <div class="phone-glow"></div>
+              <div class="phone">
+                <div class="screen">
+                  <!-- 0: daily question -->
+                  <div class="scr">
+                    <div class="s-head"><small>Good morning ☀️</small><strong>Today’s question</strong></div>
+                    <div class="s-card"><span class="s-label">Question 12</span><p class="q-big">What’s a small thing I do that makes you feel loved?</p></div>
+                    <div class="ans"><span class="av">B</span><p>When you save me the last bite 🍫</p></div>
+                    <div class="ans me"><span class="av">Y</span><p>Your “reached home?” texts</p></div>
+                    <span class="pill">You both answered ✨</span>
+                  </div>
+                  <!-- 1: touch to sync -->
+                  <div class="scr">
+                    <div class="s-head"><small><span class="live">LIVE</span></small><strong>Touch to sync</strong></div>
+                    <div class="sync">
+                      <span class="touch a"></span><span class="touch b"></span>
+                      <div class="sync-heart"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 21c-6.5-4.2-10-8-10-12a5 5 0 0 1 10-1.5A5 5 0 0 1 22 9c0 4-3.5 7.8-10 12z"/></svg></div>
+                    </div>
+                    <div class="notif"><b>💓</b><span>You’re in sync<small>Hold together and feel each other’s heartbeat</small></span></div>
+                  </div>
+                  <!-- 2: open-when letter -->
+                  <div class="scr">
+                    <div class="s-head"><small>Love capsules</small><strong>Open when…</strong></div>
+                    <div class="letter">
+                      <svg viewBox="0 0 200 140"><rect x="10" y="20" width="180" height="110" rx="14" fill="#fff"/><path d="M10 34c0-8 6-14 14-14h152c8 0 14 6 14 14l-90 56z" fill="#fde3ec"/><path d="M10 34l90 56 90-56" fill="none" stroke="#f0c9d6" stroke-width="3"/><circle cx="100" cy="88" r="20" fill="#d6336c"/><path d="M100 97c-6-4-10-7.5-10-11.5 0-3 2.4-5 5-5 2.2 0 3.9 1.2 5 3 1.1-1.8 2.8-3 5-3 2.6 0 5 2 5 5 0 4-4 7.5-10 11.5z" fill="#fff"/></svg>
+                    </div>
+                    <div class="s-card"><b>Open when you miss me</b><div class="muted-s">Sealed by Bae · waiting for the right moment</div></div>
+                    <div class="notif"><b>💌</b><span>Bae sealed a love capsule for you<small>just now</small></span></div>
+                  </div>
+                  <!-- 3: oath -->
+                  <div class="scr">
+                    <div class="s-head"><small>Before bed 🌙</small><strong>Tonight’s oath</strong></div>
+                    <div class="s-card s-dark"><p class="oath-text">“I promise to be patient, even when I’m tired.”</p></div>
+                    <div class="signs"><span>You</span><span>Bae</span></div>
+                    <span class="pill">Promise kept together 🤍</span>
+                  </div>
+                  <!-- 4: nest -->
+                  <div class="scr">
+                    <div class="s-head"><small>Day 12 together</small><strong>Your Bae Nest</strong></div>
+                    <div class="nest-big">
+                      <svg viewBox="40 55 240 165"><ellipse cx="160" cy="166" rx="108" ry="20" fill="#8e5634"/><circle cx="122" cy="148" r="32" fill="#ff9fb8"/><ellipse cx="108" cy="158" rx="15" ry="9" fill="#f27a9a" transform="rotate(-20 108 158)"/><circle cx="134" cy="138" r="3.6" fill="#2b1430"/><path d="M152 143l11 5-11 5z" fill="#f5a524"/><circle cx="198" cy="148" r="32" fill="#cfa9ec"/><ellipse cx="212" cy="158" rx="15" ry="9" fill="#b083dc" transform="rotate(20 212 158)"/><circle cx="186" cy="138" r="3.6" fill="#2b1430"/><path d="M168 143l-11 5 11 5z" fill="#f5a524"/><path d="M52 166c8 50 208 50 216 0-38 16-178 16-216 0z" fill="#b8764b"/><g fill="none" stroke="#7d4a2c" stroke-width="3" stroke-linecap="round" opacity=".75"><path d="M66 178c50 18 138 18 188 0"/><path d="M80 194c40 14 120 14 160 0"/></g><path d="M160 102c-14-9-23-17-23-27 0-7 5.5-12 11.8-12 5 0 9 2.8 11.2 7 2.2-4.2 6.2-7 11.2-7 6.3 0 11.8 5 11.8 12 0 10-9 18-23 27z" fill="#e11d5c"/></svg>
+                    </div>
+                    <div class="s-card"><b>12 twigs</b><div class="muted-s">3 more to the next level</div><div class="bar"><i></i></div></div>
+                    <div class="notif"><b>🪺</b><span>Your nest grew!<small>You both showed up today</small></span></div>
+                  </div>
+                </div>
               </div>
             </div>
-          </article>
+          </div>
 
-          <article class="tile reveal">
-            <span class="tag">Daily heartbeat</span>
-            <h3>One tap: “thinking of you”</h3>
-            <p>Your partner feels it arrive, wherever they are.</p>
-            <div class="viz">
-              <svg class="ecg" viewBox="0 0 200 60" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M0 30h50l8-18 10 36 9-30 6 12h30l7-10 7 20 6-10h67"/></svg>
-            </div>
-          </article>
+          <div class="chapters">
+            <article class="chapter active" data-step="0">
+              <span class="time">7:30 AM · Morning</span>
+              <h3>One question to <em>start the day</em></h3>
+              <p>A new question for the two of you every day. Answer, then see what your partner said — you’ll learn something new, even after years together.</p>
+              <div class="tags"><span>Daily questions</span><span>Daily history</span></div>
+            </article>
+            <article class="chapter" data-step="1">
+              <span class="time">1:15 PM · Afternoon</span>
+              <h3>Feel each other’s <em>heartbeat</em></h3>
+              <p>Touch to sync: hold the heart at the same time and feel each other — live, from across the city or across the world.</p>
+              <div class="tags"><span>Touch to sync</span><span>Live</span></div>
+            </article>
+            <article class="chapter" data-step="2">
+              <span class="time">6:40 PM · Evening</span>
+              <h3>Letters for the <em>right moment</em></h3>
+              <p>Seal an “Open when…” letter — when you miss me, when you can’t sleep, when you need a smile. Your partner opens it when they need it most.</p>
+              <div class="tags"><span>Open-when letters</span><span>Love capsules</span></div>
+            </article>
+            <article class="chapter" data-step="3">
+              <span class="time">10:00 PM · Night</span>
+              <h3>A small promise, <em>kept together</em></h3>
+              <p>Renew a daily oath before bed. Little promises, kept every day, add up to something big.</p>
+              <div class="tags"><span>Daily oath</span></div>
+            </article>
+            <article class="chapter" data-step="4">
+              <span class="time">10:05 PM · Nest time</span>
+              <h3>Your nest grows when <em>you both show up</em></h3>
+              <p>Finish your heart, question and oath together and your Bae Nest gets a new twig. Watch it grow, day after day.</p>
+              <div class="tags"><span>Bae Nest</span><span>Gentle reminders</span></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <article class="tile reveal">
-            <span class="tag">Questions &amp; oath</span>
-            <h3>Learn something new, every day</h3>
-            <p>Answer for each other, then renew a small promise.</p>
-            <div class="viz bubbles" aria-hidden="true">
-              <span class="bubble q">What made you smile today? 🌼</span>
-              <span class="bubble a">Your voice note this morning 🥹</span>
-              <span class="oath">“I promise to listen first.”</span>
-            </div>
+    <!-- ============ FEATURES ============ -->
+    <section id="features" aria-labelledby="features-title">
+      <div class="wrap">
+        <div class="section-head center reveal">
+          <span class="kicker">Everything for two</span>
+          <h2 id="features-title">So much more to <em>share</em></h2>
+          <p class="lead">Play, plan, dream and remember — all in one private space built for exactly two people.</p>
+        </div>
+        <div class="fgrid">
+          <article class="fcard reveal">
+            <div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M8 2v4M16 2v4M3 10h18"/><path d="M12 18c-2.2-1.4-3.5-2.6-3.5-4a1.8 1.8 0 0 1 3.5-.6 1.8 1.8 0 0 1 3.5.6c0 1.4-1.3 2.6-3.5 4z"/></svg></div>
+            <h3>Date night matcher</h3><p>Swipe date ideas on your own phones. Match, then go out.</p>
           </article>
-
-          <article class="tile tile-moments reveal">
-            <div>
-              <span class="tag">Partner moments</span>
-              <h3>Share it as it happens</h3>
-              <p>A coffee, a sunset, a silly face. Your partner hears a soft chime and smiles.</p>
-            </div>
-            <div class="viz moments" aria-hidden="true">
-              <div class="polaroid"><div>☕</div>Morning coffee</div>
-              <div class="polaroid"><div>🌅</div>Sunset walk</div>
-              <div class="polaroid"><div>🍜</div>Late dinner</div>
-              <div class="polaroid"><div>🐶</div>Look who’s here</div>
-            </div>
+          <article class="fcard reveal">
+            <div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M3.5 6l1 1 2-2M3.5 12l1 1 2-2M4 18h2"/></svg></div>
+            <h3>100 things together</h3><p>A bucket list for two. Tick them off one by one.</p>
+          </article>
+          <article class="fcard reveal">
+            <div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .8-1 1.4v.3M12 17h.01"/></svg></div>
+            <h3>Know your partner</h3><p>How well do you really know them? Find out.</p>
+          </article>
+          <article class="fcard reveal">
+            <div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg></div>
+            <h3>Who knows better?</h3><p>Couple quizzes with a friendly scoreboard.</p>
+          </article>
+          <article class="fcard reveal">
+            <div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg></div>
+            <h3>Games for two</h3><p>Tic-tac-toe and quick games when you have a minute.</p>
+          </article>
+          <article class="fcard reveal">
+            <div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21v-9"/><path d="M12 12c0-4 3-7 8-7 0 5-3 7-8 7zM12 14c0-3-2.5-5.5-7-5.5 0 4 2.5 5.5 7 5.5z"/></svg></div>
+            <h3>Grow together</h3><p>Small shared goals. Big love.</p>
+          </article>
+          <article class="fcard reveal">
+            <div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8-4.3-4.1 5.9-.9z"/></svg></div>
+            <h3>Future board</h3><p>Dream together and plan what comes next.</p>
+          </article>
+          <article class="fcard reveal">
+            <div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 9"/></svg></div>
+            <h3>Memories</h3><p>Keep your favourite moments in one place.</p>
+          </article>
+          <article class="fcard reveal">
+            <div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg></div>
+            <h3>Private chat</h3><p>A conversation that’s only for the two of you.</p>
+          </article>
+          <article class="fcard reveal">
+            <div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg></div>
+            <h3>Thoughtful reminders</h3><p>Never miss the little things that matter to them.</p>
+          </article>
+          <article class="fcard reveal">
+            <div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.6L18.5 9l-4.7 1.4L12 15l-1.8-4.6L5.5 9l4.7-1.4z"/><path d="M19 15l.9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9z"/></svg></div>
+            <h3>Partner moments</h3><p>Share a moment as it happens — they hear a soft chime.</p>
+          </article>
+          <article class="fcard reveal">
+            <div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5M12 7v5l3 2"/></svg></div>
+            <h3>Daily history</h3><p>Look back on every answer and every promise.</p>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- ============ DATE MATCHER ============ -->
+    <section class="alt matcher" aria-labelledby="match-title">
+      <div class="wrap split">
+        <div class="reveal">
+          <span class="kicker">Date night matcher</span>
+          <h2 id="match-title">Date night, <em>decided.</em></h2>
+          <p class="lead">No more “I don’t know, what do you want to do?” Swipe through date ideas on your own phones — when you both like the same one, it’s a match.</p>
+          <ul class="checks">
+            <li><span><strong>Swipe on your own phone,</strong> whenever you have a minute.</span></li>
+            <li><span><strong>Match together.</strong> “You matched on a date idea 🎉”</span></li>
+            <li><span><strong>Then just go.</strong> Date night, sorted.</span></li>
+          </ul>
+        </div>
+        <div class="deck-wrap reveal" aria-hidden="true">
+          <div class="deck">
+            <div class="dcard c3"><span class="emoji">🌌</span><b>Stargazing drive</b><span>Blanket, playlist, sky</span></div>
+            <div class="dcard c2"><span class="stamp like">LIKE</span><span class="emoji">🧺</span><b>Sunset picnic</b><span>Golden hour, just you two</span></div>
+            <div class="dcard c1"><span class="stamp nope">NOPE</span><span class="emoji">🎳</span><b>Bowling night</b><span>Loser buys dessert</span></div>
+            <div class="match-pop"><div><b>It’s a match! 🎉</b><span>Sunset picnic · this Saturday</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TRUST ============ -->
+    <section aria-labelledby="trust-title">
+      <div class="wrap">
+        <div class="section-head center reveal">
+          <span class="kicker">Built with care</span>
+          <h2 id="trust-title">Just the <em>two of you</em></h2>
+        </div>
+        <div class="trust">
+          <article class="tcard reveal">
+            <div class="big" aria-hidden="true">🔒</div>
+            <h3>Private by design</h3>
+            <p>No public profiles, no followers, no feed. What you share lives in your nest, for your partner.</p>
+          </article>
+          <article class="tcard reveal">
+            <div class="big" aria-hidden="true">🌏</div>
+            <h3>Speaks your language</h3>
+            <p>Use BaeNest in the language that feels like home.</p>
+            <div class="langs"><span lang="en">English</span><span lang="ta">தமிழ்</span><span lang="hi">हिन्दी</span><span lang="ml">മലയാളം</span><span lang="kn">ಕನ್ನಡ</span><span lang="te">తెలుగు</span><span lang="fr">Français</span></div>
+          </article>
+          <article class="tcard reveal">
+            <div class="big" aria-hidden="true">✈️</div>
+            <h3>Close or far apart</h3>
+            <p>Sitting together or living in different time zones — your rituals reach each other either way.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PAIRING ============ -->
     <section id="pair" class="alt" aria-labelledby="pair-title">
       <div class="wrap">
         <div class="section-head reveal">
@@ -197,9 +332,7 @@
             <p>Sitting side by side? One phone shows a QR code, the other scans it.</p>
             <div class="viz" aria-hidden="true">
               <svg class="qr" viewBox="0 0 25 25" shape-rendering="crispEdges">
-                <g fill="#2b1430">
-                  <path d="M0 0h7v7H0zM18 0h7v7h-7zM0 18h7v7H0z"/>
-                </g>
+                <g fill="#2b1430"><path d="M0 0h7v7H0zM18 0h7v7h-7zM0 18h7v7H0z"/></g>
                 <g fill="#fff"><path d="M1 1h5v5H1zM19 1h5v5h-5zM1 19h5v5H1z"/></g>
                 <g fill="#2b1430">
                   <path d="M2 2h3v3H2zM20 2h3v3h-3zM2 20h3v3H2z"/>
@@ -229,9 +362,10 @@
       </div>
     </section>
 
+    <!-- ============ FAQ ============ -->
     <section id="faq" aria-labelledby="faq-title">
       <div class="wrap">
-        <div class="section-head reveal">
+        <div class="section-head center reveal">
           <span class="kicker">FAQ</span>
           <h2 id="faq-title">Good <em>questions</em></h2>
         </div>
@@ -242,7 +376,7 @@
           </details>
           <details>
             <summary>We’re long-distance. Does it still work?</summary>
-            <p>Yes. Send your invite on WhatsApp to pair, and heartbeats and moments reach your partner wherever they are.</p>
+            <p>Yes. Send your invite on WhatsApp to pair; Touch to sync, questions and moments reach your partner wherever they are.</p>
           </details>
           <details>
             <summary>Who can see what I share?</summary>
@@ -250,7 +384,11 @@
           </details>
           <details>
             <summary>How does the nest grow?</summary>
-            <p>Each day you both finish your heartbeat, questions and oath, your nest gets a new twig.</p>
+            <p>Each day you both finish your heart, question and oath, your nest gets a new twig.</p>
+          </details>
+          <details>
+            <summary>Which languages are supported?</summary>
+            <p>English, Tamil, Hindi, Malayalam, Kannada, Telugu and French.</p>
           </details>
           <details>
             <summary>Is there an iPhone version?</summary>
@@ -260,16 +398,17 @@
       </div>
     </section>
 
-    <section aria-labelledby="cta-title">
-      <div class="wrap">
-        <div class="band reveal">
-          <h2 id="cta-title">Start your nest <em>tonight</em></h2>
-          <p class="lead">Two phones, one nest, a few minutes a day.</p>
-          <a class="btn btn-play" href="https://play.google.com/store/apps/details?id=com.baenest.app" rel="noopener">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 3.5v17a1 1 0 0 0 1.5.86l14-8.5a1 1 0 0 0 0-1.72l-14-8.5A1 1 0 0 0 5 3.5z"/></svg>
-            <span><small>Get it on</small>Google Play</span>
-          </a>
-        </div>
+    <!-- ============ FINALE ============ -->
+    <section class="finale night" aria-labelledby="cta-title">
+      <div class="aurora" aria-hidden="true"></div>
+      <div class="stars" data-count="70" aria-hidden="true"></div>
+      <div class="wrap reveal">
+        <h2 id="cta-title">Start your nest <em>tonight.</em></h2>
+        <p class="lead">Two phones. One nest. A few minutes a day.</p>
+        <a class="btn btn-play" href="https://play.google.com/store/apps/details?id=com.baenest.app" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 3.5v17a1 1 0 0 0 1.5.86l14-8.5a1 1 0 0 0 0-1.72l-14-8.5A1 1 0 0 0 5 3.5z"/></svg>
+          <span><small>Get it on</small>Google Play</span>
+        </a>
       </div>
     </section>
   </main>
