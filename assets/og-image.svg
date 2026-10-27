@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <!-- Source for /og-image.jpg (1200x630, JPEG q90). Re-render after editing. -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd9cf"/>
+      <stop offset=".5" stop-color="#ffc6d8"/>
+      <stop offset="1" stop-color="#e3caf3"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#fff" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bowl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d39468"/>
+      <stop offset="1" stop-color="#a5643f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="900" cy="330" r="290" fill="url(#glow)"/>
+
+  <g font-family="Segoe UI, system-ui, sans-serif" fill="#2b1430">
+    <text x="90" y="250" font-size="112" font-weight="800" letter-spacing="-3">BaeNest</text>
+    <text x="94" y="330" font-size="50" font-weight="600" fill="#5b1f55">A cozy nest for two</text>
+    <text x="94" y="420" font-size="32" fill="#64435b">Daily heartbeat · Questions &amp; oath</text>
+    <text x="94" y="464" font-size="32" fill="#64435b">A nest that grows when you both show up</text>
+    <text x="94" y="560" font-size="30" font-weight="700" fill="#b8174f">baenest.com</text>
+  </g>
+
+  <g transform="translate(700 90) scale(1.6)">
+    <g fill="#ff7aa2">
+      <path d="M58 70l3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/>
+      <path d="M262 58l2.4 5.6 5.6 2.4-5.6 2.4-2.4 5.6-2.4-5.6-5.6-2.4 5.6-2.4z"/>
+    </g>
+    <ellipse cx="160" cy="166" rx="108" ry="20" fill="#8e5634"/>
+    <circle cx="122" cy="148" r="32" fill="#ff9fb8"/>
+    <ellipse cx="108" cy="158" rx="15" ry="9" fill="#f27a9a" transform="rotate(-20 108 158)"/>
+    <circle cx="134" cy="138" r="3.6" fill="#2b1430"/>
+    <circle cx="138" cy="150" r="5" fill="#ff7aa2" opacity=".55"/>
+    <path d="M152 143l11 5-11 5z" fill="#f5a524"/>
+    <path d="M112 118c2-8 8-12 14-10" fill="none" stroke="#f27a9a" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="198" cy="148" r="32" fill="#cfa9ec"/>
+    <ellipse cx="212" cy="158" rx="15" ry="9" fill="#b083dc" transform="rotate(20 212 158)"/>
+    <circle cx="186" cy="138" r="3.6" fill="#2b1430"/>
+    <circle cx="182" cy="150" r="5" fill="#ff7aa2" opacity=".5"/>
+    <path d="M168 143l-11 5 11 5z" fill="#f5a524"/>
+    <path d="M52 166c8 50 208 50 216 0-38 16-178 16-216 0z" fill="url(#bowl)"/>
+    <g fill="none" stroke="#7d4a2c" stroke-width="3" stroke-linecap="round" opacity=".75">
+      <path d="M66 178c50 18 138 18 188 0"/>
+      <path d="M80 194c40 14 120 14 160 0"/>
+      <path d="M60 170l22 14M110 182l18 14M168 186l20-10M224 182l24-12M140 200l-14 6M200 198l14 6"/>
+    </g>
+    <path d="M160 102c-14-9-23-17-23-27 0-7 5.5-12 11.8-12 5 0 9 2.8 11.2 7 2.2-4.2 6.2-7 11.2-7 6.3 0 11.8 5 11.8 12 0 10-9 18-23 27z" fill="#e11d5c"/>
+  </g>
+</svg>
