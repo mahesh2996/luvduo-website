@@ -25,9 +25,21 @@
     }
   });
 
-  // Hero: copy drifts up and fades, phone eases forward as you scroll away
+  // Header switches to dark glass while it sits over a night section
+  var header = document.querySelector('.site-header');
+  var nights = document.querySelectorAll('.night');
+  if (header && nights.length && hasIO) {
+    var over = new Set();
+    var hio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) over.add(e.target); else over.delete(e.target); });
+      header.classList.toggle('on-night', over.size > 0);
+    }, { rootMargin: '0px 0px -92% 0px' });
+    nights.forEach(function (n) { hio.observe(n); });
+  }
+
+  // Hero (wide screens): copy drifts up and fades, phone eases forward as you scroll away
   var hero = document.querySelector('.hero');
-  if (hero && !reduce) {
+  if (hero && !reduce && window.matchMedia('(min-width: 960px)').matches) {
     var ticking = false;
     var update = function () {
       var p = Math.min(Math.max(window.scrollY / (hero.offsetHeight * 0.9), 0), 1);
