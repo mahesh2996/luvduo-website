@@ -13,6 +13,7 @@
   // Twinkling star field for .night sections
   document.querySelectorAll('.stars').forEach(function (box) {
     var n = parseInt(box.getAttribute('data-count'), 10) || 60;
+    if (window.innerWidth < 600) n = Math.round(n / 2);
     for (var i = 0; i < n; i++) {
       var s = document.createElement('i');
       var size = Math.random() < 0.85 ? 1.5 : 2.5;
@@ -28,13 +29,22 @@
   // Header switches to dark glass while it sits over a night section
   var header = document.querySelector('.site-header');
   var nights = document.querySelectorAll('.night');
-  if (header && nights.length && hasIO) {
-    var over = new Set();
-    var hio = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) { if (e.isIntersecting) over.add(e.target); else over.delete(e.target); });
-      header.classList.toggle('on-night', over.size > 0);
-    }, { rootMargin: '0px 0px -92% 0px' });
-    nights.forEach(function (n) { hio.observe(n); });
+  if (header && nights.length) {
+    var mid = 42; // vertical middle of the floating header bar
+    var checkHeader = function () {
+      var on = false;
+      nights.forEach(function (n) {
+        var r = n.getBoundingClientRect();
+        if (r.top <= mid && r.bottom >= mid) on = true;
+      });
+      header.classList.toggle('on-night', on);
+    };
+    var headerTick = false;
+    window.addEventListener('scroll', function () {
+      if (!headerTick) { headerTick = true; requestAnimationFrame(function () { checkHeader(); headerTick = false; }); }
+    }, { passive: true });
+    window.addEventListener('load', checkHeader);
+    checkHeader();
   }
 
   // Hero (wide screens): copy drifts up and fades, phone eases forward as you scroll away
