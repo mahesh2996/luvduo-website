@@ -8,7 +8,8 @@
   <meta name="description" content="BaeNest is the couples app for daily rituals: feel each other's heartbeat with Touch to sync, answer a daily question, keep a promise, seal open-when letters, match on date nights and grow a nest together.">
   <meta name="theme-color" content="#2a0b1c">
   <link rel="canonical" href="https://baenest.com/">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/app-icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/app-icon.png">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="BaeNest">
   <meta property="og:url" content="https://baenest.com/">
@@ -31,7 +32,7 @@
   <header class="site-header">
     <div class="wrap">
       <a class="brand" href="/" aria-label="BaeNest home">
-        <img src="/favicon.svg" width="32" height="32" alt="">
+        <img src="/assets/logo-mark.png" width="34" height="34" alt="">
         BaeNest
       </a>
       <nav class="nav" aria-label="Main">
@@ -52,7 +53,7 @@
       <div class="stars" data-count="90" aria-hidden="true"></div>
       <div class="wrap">
         <div class="hero-copy">
-          <span class="eyebrow fade-up"><span class="dot" aria-hidden="true">♥</span>The couples app made for exactly two</span>
+          <span class="eyebrow fade-up"><img class="dot-logo" src="/assets/logo-mark.png" width="22" height="22" alt="">The couples app made for exactly two</span>
           <h1 id="hero-title"><span class="h-line"><span>A <em>cozy</em> nest</span></span><span class="h-line"><span>for two.</span></span></h1>
           <p class="lead fade-up d1">Small daily rituals for two — and a nest that grows when you both show up.</p>
           <div class="cta-row fade-up d2">
@@ -137,7 +138,31 @@
                   <div class="scr">
                     <div class="s-head"><small>Love capsules</small><strong>Open when…</strong></div>
                     <div class="letter">
-                      <svg viewBox="0 0 200 140"><rect x="10" y="20" width="180" height="110" rx="14" fill="#fff"/><path d="M10 34c0-8 6-14 14-14h152c8 0 14 6 14 14l-90 56z" fill="#fde3ec"/><path d="M10 34l90 56 90-56" fill="none" stroke="#f0c9d6" stroke-width="3"/><circle cx="100" cy="88" r="20" fill="#d6336c"/><path d="M100 97c-6-4-10-7.5-10-11.5 0-3 2.4-5 5-5 2.2 0 3.9 1.2 5 3 1.1-1.8 2.8-3 5-3 2.6 0 5 2 5 5 0 4-4 7.5-10 11.5z" fill="#fff"/></svg>
+                      <svg viewBox="0 0 200 180" class="env">
+                        <defs>
+                          <linearGradient id="envFront" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fde8ee"/><stop offset="1" stop-color="#f7cbd8"/></linearGradient>
+                          <linearGradient id="envFlap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbd9e3"/><stop offset="1" stop-color="#f3b9ca"/></linearGradient>
+                          <radialGradient id="wax" cx=".35" cy=".3" r=".75"><stop offset="0" stop-color="#f06292"/><stop offset=".6" stop-color="#c2185b"/><stop offset="1" stop-color="#7a0f3a"/></radialGradient>
+                        </defs>
+                        <ellipse cx="100" cy="170" rx="70" ry="6" fill="#3a0f24" opacity=".12"/>
+                        <path d="M22 78h156v74a10 10 0 0 1-10 10H32a10 10 0 0 1-10-10z" fill="#e7a3b8"/>
+                        <path class="env-flap-back" d="M22 78 100 30 178 78z" fill="url(#envFlap)"/>
+                        <g class="env-paper">
+                          <rect x="36" y="84" width="128" height="92" rx="6" fill="#fffdf9"/>
+                          <text x="100" y="104" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="12" fill="#a0174f">Open when you miss me</text>
+                          <path d="M52 118h96M52 130h80M52 142h90" stroke="#efd6de" stroke-width="4" stroke-linecap="round"/>
+                          <path d="M100 160c-4-2.6-6.5-4.8-6.5-7.3 0-2 1.5-3.3 3.3-3.3 1.4 0 2.5.8 3.2 1.9.7-1.1 1.8-1.9 3.2-1.9 1.8 0 3.3 1.3 3.3 3.3 0 2.5-2.5 4.7-6.5 7.3z" fill="#e11d5c"/>
+                        </g>
+                        <path d="M22 78 100 126 178 78v74a10 10 0 0 1-10 10H32a10 10 0 0 1-10-10z" fill="url(#envFront)"/>
+                        <path d="M24 158 88 116M176 158 112 116" stroke="#efb3c5" stroke-width="2" stroke-linecap="round"/>
+                        <g class="env-flap-front">
+                          <path d="M22 78h156l-78 50z" fill="url(#envFlap)"/>
+                          <path d="M22 78l78 50 78-50" fill="none" stroke="#eeaec1" stroke-width="2" stroke-linejoin="round"/>
+                          <circle cx="100" cy="120" r="15" fill="url(#wax)"/>
+                          <circle cx="100" cy="120" r="11" fill="none" stroke="#f48fb1" stroke-width="1.2" opacity=".6"/>
+                          <path d="M100 126c-4.2-2.7-6.8-5-6.8-7.6 0-2.1 1.6-3.5 3.4-3.5 1.5 0 2.7.8 3.4 2 .7-1.2 1.9-2 3.4-2 1.8 0 3.4 1.4 3.4 3.5 0 2.6-2.6 4.9-6.8 7.6z" fill="#fde3ec"/>
+                        </g>
+                      </svg>
                     </div>
                     <div class="s-card"><b>Open when you miss me</b><div class="muted-s">Sealed by Bae · waiting for the right moment</div></div>
                     <div class="notif"><b>💌</b><span>Bae sealed a love capsule for you<small>just now</small></span></div>
@@ -388,6 +413,7 @@
       <div class="aurora" aria-hidden="true"></div>
       <div class="stars" data-count="70" aria-hidden="true"></div>
       <div class="wrap reveal">
+        <div class="logo-orb" aria-hidden="true"><img src="/assets/logo-mark.png" width="128" height="128" alt="" loading="lazy" decoding="async"></div>
         <h2 id="cta-title">Start your nest <em>tonight.</em></h2>
         <p class="lead">Two phones. One nest. A few minutes a day.</p>
         <a class="btn btn-play" href="https://play.google.com/store/apps/details?id=com.baenest.app" rel="noopener">
@@ -404,7 +430,7 @@
       <nav aria-label="Footer">
         <a href="/privacy/">Privacy</a>
         <a href="/terms/">Terms</a>
-        <a href="mailto:admin@baenest.com">Contact</a>
+        <a href="/contact/">Contact</a>
       </nav>
     </div>
   </footer>
