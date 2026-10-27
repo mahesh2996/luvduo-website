@@ -1,4 +1,4 @@
-// Header shadow on scroll, sticky story, fade-in on scroll, footer year.
+// Stars, hero parallax, sticky story, card spotlight, fade-in on scroll, footer year.
 // No tracking, no network calls.
 (function () {
   var root = document.documentElement;
@@ -10,18 +10,56 @@
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 
-  // Header gets a hairline + soft shadow once the page scrolls
+  // Twinkling star field for .night sections
+  document.querySelectorAll('.stars').forEach(function (box) {
+    var n = parseInt(box.getAttribute('data-count'), 10) || 60;
+    if (window.innerWidth < 600) n = Math.round(n / 2);
+    for (var i = 0; i < n; i++) {
+      var s = document.createElement('i');
+      var size = Math.random() < 0.85 ? 1.5 : 2.5;
+      s.style.width = s.style.height = size + 'px';
+      s.style.left = (Math.random() * 100).toFixed(2) + '%';
+      s.style.top = (Math.random() * 100).toFixed(2) + '%';
+      s.style.setProperty('--t', (2 + Math.random() * 4).toFixed(1) + 's');
+      s.style.setProperty('--d', (-Math.random() * 6).toFixed(1) + 's');
+      box.appendChild(s);
+    }
+  });
+
+  // Header switches to dark glass while it sits over a night section
   var header = document.querySelector('.site-header');
-  if (header) {
-    var ticking = false;
+  var nights = document.querySelectorAll('.night');
+  if (header && nights.length) {
+    var mid = 42; // vertical middle of the floating header bar
     var checkHeader = function () {
-      header.classList.toggle('scrolled', window.scrollY > 8);
+      var on = false;
+      nights.forEach(function (n) {
+        var r = n.getBoundingClientRect();
+        if (r.top <= mid && r.bottom >= mid) on = true;
+      });
+      header.classList.toggle('on-night', on);
+    };
+    var headerTick = false;
+    window.addEventListener('scroll', function () {
+      if (!headerTick) { headerTick = true; requestAnimationFrame(function () { checkHeader(); headerTick = false; }); }
+    }, { passive: true });
+    window.addEventListener('load', checkHeader);
+    checkHeader();
+  }
+
+  // Hero (wide screens): copy drifts up and fades, phone eases forward as you scroll away
+  var hero = document.querySelector('.hero');
+  if (hero && !reduce && window.matchMedia('(min-width: 960px)').matches) {
+    var ticking = false;
+    var update = function () {
+      var p = Math.min(Math.max(window.scrollY / (hero.offsetHeight * 0.9), 0), 1);
+      hero.style.setProperty('--hs', p.toFixed(3));
       ticking = false;
     };
     window.addEventListener('scroll', function () {
-      if (!ticking) { ticking = true; requestAnimationFrame(checkHeader); }
+      if (!ticking) { ticking = true; requestAnimationFrame(update); }
     }, { passive: true });
-    checkHeader();
+    update();
   }
 
   // Story: the chapter in focus picks the phone screen
@@ -38,6 +76,15 @@
     }, { rootMargin: wide ? '-45% 0px -45% 0px' : '-64% 0px -28% 0px' });
     chapters.forEach(function (c) { sio.observe(c); });
   }
+
+  // Feature cards: soft spotlight follows the pointer
+  document.querySelectorAll('.fcard').forEach(function (c) {
+    c.addEventListener('pointermove', function (e) {
+      var r = c.getBoundingClientRect();
+      c.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+      c.style.setProperty('--my', (e.clientY - r.top) + 'px');
+    });
+  });
 
   // Fade-in on scroll
   var items = document.querySelectorAll('.reveal');
