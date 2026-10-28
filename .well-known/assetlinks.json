@@ -4,7 +4,7 @@
     "target": {
       "namespace": "android_app",
       "package_name": "com.baenest.app",
-      "sha256_cert_fingerprints": ["TODO_DEBUG_SHA256", "TODO_RELEASE_SHA256"]
+      "sha256_cert_fingerprints": ["D9:F6:DD:8F:0B:68:AD:DD:AB:88:85:7C:B2:71:DF:6F:22:65:21:4A:2D:CE:08:4F:1B:EE:51:95:FA:6E:61:7A", "TODO_RELEASE_SHA256"]
     }
   }
 ]
